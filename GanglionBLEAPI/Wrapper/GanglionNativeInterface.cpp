@@ -140,7 +140,7 @@ namespace GanglionLibNative
     int get_data_native (void *param)
     {
         Ganglion ^ wrapper = GanglionLibWrapper::instance->ganglion_obj;
-        board_data ^ managed_data = wrapper->get_data ();
+        BoardData ^ managed_data = wrapper->get_data ();
         if (managed_data->exit_code != (int)CustomExitCodes::STATUS_OK)
         {
             return managed_data->exit_code;
